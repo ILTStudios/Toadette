@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Toadette</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="heading">Toadette
+      <!-- <div class="subheading">Your Personal Day Manager</div> -->
+    </div>
+    <div class="daytimecontainer">
+      <div class="day-count"></div>
+      <div class="time"></div>
+    </div>
+    <div class="container flexify">
+      <div class="side-bar">
+        <a class = 'home'>Home</a>
+        <div class="underline"></div>
+        <a>Boards</a>
+        <div class="board-container">
+          <div class = 'side-bar-board'>To Do</div>
+          <div class = 'side-bar-board'>Homework</div>
+        </div>
+      </div>
+      <div style = "display: none;" class="board">
+        
+      </div>
+      <div class="widgets">
+      <div class="weather">
+        Weather
+        <div class="close-container">
+          <div class="close"></div>
+        </div>
+        <div class="data-container open">
+          <div class="main-weather">
+            <div class="weather-area">
+              <div class="area-heading"></div>
+              <div class="area-subheading">WEATHER</div>
+            </div>
+            <div class="weather-icon">
+            </div>
+            <div class="weather-data">
+              <div class="temperature"></div>
+              <div class="weather-description"></div>
+            </div>
+          </div>
+          <div class="weather_day_container">
+          </div>
+        </div>
+      </div>
+      <!--<div class="folders">
+        <div class="heading">What do you Plan to Do?</div>
+      </div>-->
+      </div>
+    </div>
+ 
+
+    <script src = 'main.js'></script>
+    <script src = 'weather.js'></script>
+    <script src = 'timer.js'></script>
+    <script src = 'main-boards.js'></script>
+  </body>
+</html>

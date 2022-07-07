@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root{
+  --background: #222831;
+  --foreground:  #393E46;
+  --heading:  #00ADB5;
+  --font:  #EEEEEE
+}
+
+body{
+  background-color: var(--background);
+  color: var(--font);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.main-weather{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.flexify-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-container{
+  height: 3rem;
+  padding: 1rem;
+}
+.close{
+  border: solid var(--background);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 1rem;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all .2s ease;
+  -webkit-animation-name: arrow_anim;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-play-state: running;
+  -webkit-animation-iteration-count: infinite;
+}
+.close:hover{
+  cursor: pointer;
+  border-color: var(--heading);
+}
+@keyframes arrow_anim {
+  0%{
+      margin-top: 0rem;
+  }
+  50%{
+      margin-top: .5rem;
+  }
+  100%{
+      margin-top: 0rem;
+  }
+}
+
+/* heading */
+.heading{
+  padding: 1.5rem 0 0 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}.subheading{
+  padding: 1rem;
+  font-size: .75rem;
+  font-size: 100;
+}
+
+/**/
+
+.data-container{
+  max-height: 600px;
+  transition: all .5s ease-in-out;
+}.data-container.open{
+  opacity: 0;
+  max-height: 0;
+}
+
+/* widgets */
+.widgets{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* day time */
+.daytimecontainer{
+  padding: 0rem 2rem 0rem 2rem;
+}
+.day-count{
+  color: var(--heading);
+  font-size: 2rem;
+  font-weight: 400;
+}
+.time{
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: 0rem .5rem .15rem .5rem;
+}
+
+/**/
+
+/* weather */
+.weather{
+  background-color: #393E4685;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+.weather-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 0rem 4rem 0rem 4rem;
+}
+.area-heading{
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+.area-subheading{
+  font-weight: 400;
+  color: white;
+}
+
+.weather-icon{
+  background-size: cover;
+  z-index: 10;
+  height: 9rem;
+  width: 9rem;
+  margin: 0rem 10rem 0rem 10rem;
+}
+
+.weather-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 4rem 0rem 4rem;
+}
+.temperature{
+  color: white;
+  font-size: 200;
+}
+.weather-description{
+  color: white;
+  font-weight: 400;
+}
+
+.weather_day_container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.individual-day{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}.individual-day div{
+  margin: 1rem 2rem 0rem 2rem;
+}
+
+.day{
+  color: var(--heading);
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+.icon{
+  height: 4rem;
+  width: 4rem;
+  background-size: cover;
+}
+.day-temperature{
+  color: white;
+  font-weight: 400;
+}
+/**/
+
+/* Side bar */
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  float: left;
+  padding: 2rem;
+}
+.side-bar a,
+.side-bar div{
+  margin: 0.5rem;
+  text-decoration: none;
+  color: var(--font);
+  font-size: 1.25rem;
+  transition: all .1s ease-in-out;
+}
+.side-bar a:hover,
+.board-container div:hover{
+  cursor: pointer;
+  color: var(--heading);
+  transform: scale(1.1);
+}
+
+.underline{
+  margin: 1rem 0rem 1rem 0.25rem;
+  height: 1px;
+  width: 100%;
+  background-color: var(--font);
+}
+
+.board-container{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem 1rem 1rem;
+}
+.board-container a{
+  font-size: 1rem;
+  transition: all .1s ease;
+}
+.board-container a:hover{
+  color: var(--heading);
+  transform: scale(1.1);
+}
+/**/
+
+/* board content */
+.board{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  color: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.board-content{
+  color: var(--font);
+}
+.content-header{
+  padding: .5rem 0rem 0rem 1rem;
+  color: var(--font);
+  font-weight: 400;
+}
+.board-content-body{
+}
+.board-content-body-text{
+  color: white;
+  padding: 1rem 0rem 0rem 2rem;
+  font-size: 1rem;
+  font-weight: 200;
+}
